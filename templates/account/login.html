@@ -1,0 +1,128 @@
+<!-- MODALS  -->
+
+<!-- MODAL-SIGN-IN  -->
+<section class="modal" id="modal__sign-in">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <div class="modal__content-body">
+                <button class="modal__close js-modal-sign-in-close" type="button">
+                    <img src="../static/img/icon-close.svg" alt="" width="24" height="24">
+                </button>
+                <h2 class="modal__content-title">Kirish</h2>
+                <button class="button button--block button--google button--modal" type="button"><img
+                        class="google-icon auth-img"
+                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNy42NCA5LjIwNWMwLS42MzktLjA1Ny0xLjI1Mi0uMTY0LTEuODQxSDl2My40ODFoNC44NDRhNC4xNCA0LjE0IDAgMCAxLTEuNzk2IDIuNzE2djIuMjU5aDIuOTA4YzEuNzAyLTEuNTY3IDIuNjg0LTMuODc1IDIuNjg0LTYuNjE1eiIgZmlsbD0iIzQyODVGNCIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+PHBhdGggZD0iTTkgMThjMi40MyAwIDQuNDY3LS44MDYgNS45NTYtMi4xOGwtMi45MDgtMi4yNTljLS44MDYuNTQtMS44MzcuODYtMy4wNDguODYtMi4zNDQgMC00LjMyOC0xLjU4NC01LjAzNi0zLjcxMUguOTU3djIuMzMyQTguOTk3IDguOTk3IDAgMCAwIDkgMTh6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD48cGF0aCBkPSJNMy45NjQgMTAuNzFBNS40MSA1LjQxIDAgMCAxIDMuNjgyIDljMC0uNTkzLjEwMi0xLjE3LjI4Mi0xLjcxVjQuOTU4SC45NTdBOC45OTYgOC45OTYgMCAwIDAgMCA5YzAgMS40NTIuMzQ4IDIuODI3Ljk1NyA0LjA0MmwzLjAwNy0yLjMzMnoiIGZpbGw9IiNGQkJDMDUiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPjxwYXRoIGQ9Ik05IDMuNThjMS4zMjEgMCAyLjUwOC40NTQgMy40NCAxLjM0NWwyLjU4Mi0yLjU4QzEzLjQ2My44OTEgMTEuNDI2IDAgOSAwQTguOTk3IDguOTk3IDAgMCAwIC45NTcgNC45NThMMy45NjQgNy4yOUM0LjY3MiA1LjE2MyA2LjY1NiAzLjU4IDkgMy41OHoiIGZpbGw9IiNFQTQzMzUiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDBoMTh2MThIMHoiPjwvcGF0aD48L2c+PC9zdmc+"
+                        alt="" width="32" height="32"> <span>Google bilan davom eting</span></button>
+                <button class="button button--block button--facebook button--modal" type="button">
+                    <svg class="auth-img" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                         fill="currentColor" color="#1877F2" class="ui-svg-inline">
+                        <path d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"></path>
+                    </svg>
+                    Facebook bilan davom eting
+                </button>
+                <div class="modal__content-divider-wrapper">
+                    <div class="modal__content-divider">
+                        <hr>
+                    </div>
+                    <div class="modal__content-or">yoki</div>
+                    <div class="modal__content-divider">
+                        <hr>
+                    </div>
+                </div>
+                <form class="registration-form" action="https://kun.uz" method="GET">
+                    <div class="registration-form__fields">
+                        <input class="registration-form__field" type="email" name="email" placeholder="Email"
+                               aria-label="email" required>
+                        <input class="registration-form__field" type="password" name="password" placeholder="Parol"
+                               aria-label="password" required>
+                    </div>
+                    <button class="button button--block registration-form__submit" type="submit">Kirish</button>
+                </form>
+                <div class="modal__content-forgot-password">
+                    <a class="modal__content-forgot-password-link" href="#">Parolni esdan chiqardingizmi?</a>
+                </div>
+            </div>
+            <footer class="modal__content-footer">
+                <div class="modal__content-footer-text"><span>Hisobingiz yoʻqmi?</span>
+                    <a class="modal__content-footer-sign-up" href="{% url 'account:sign' %}">Roʻyxatdan oʻting</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL-SIGN-UP  -->
+<section class="modal" id="modal__sign-up">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <div class="modal__content-body">
+                <button class="modal__close js-modal-sign-up-close" type="button">
+                    <img src="../static/img/icon-close.svg" alt="" width="24" height="24">
+                </button>
+                <h2 class="modal__content-title">Roʻyxatdan oʻtish</h2>
+                <button class="button button--block button--google button--modal" type="button"><img
+                        class="google-icon auth-img"
+                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNy42NCA5LjIwNWMwLS42MzktLjA1Ny0xLjI1Mi0uMTY0LTEuODQxSDl2My40ODFoNC44NDRhNC4xNCA0LjE0IDAgMCAxLTEuNzk2IDIuNzE2djIuMjU5aDIuOTA4YzEuNzAyLTEuNTY3IDIuNjg0LTMuODc1IDIuNjg0LTYuNjE1eiIgZmlsbD0iIzQyODVGNCIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+PHBhdGggZD0iTTkgMThjMi40MyAwIDQuNDY3LS44MDYgNS45NTYtMi4xOGwtMi45MDgtMi4yNTljLS44MDYuNTQtMS44MzcuODYtMy4wNDguODYtMi4zNDQgMC00LjMyOC0xLjU4NC01LjAzNi0zLjcxMUguOTU3djIuMzMyQTguOTk3IDguOTk3IDAgMCAwIDkgMTh6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD48cGF0aCBkPSJNMy45NjQgMTAuNzFBNS40MSA1LjQxIDAgMCAxIDMuNjgyIDljMC0uNTkzLjEwMi0xLjE3LjI4Mi0xLjcxVjQuOTU4SC45NTdBOC45OTYgOC45OTYgMCAwIDAgMCA5YzAgMS40NTIuMzQ4IDIuODI3Ljk1NyA0LjA0MmwzLjAwNy0yLjMzMnoiIGZpbGw9IiNGQkJDMDUiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPjxwYXRoIGQ9Ik05IDMuNThjMS4zMjEgMCAyLjUwOC40NTQgMy40NCAxLjM0NWwyLjU4Mi0yLjU4QzEzLjQ2My44OTEgMTEuNDI2IDAgOSAwQTguOTk3IDguOTk3IDAgMCAwIC45NTcgNC45NThMMy45NjQgNy4yOUM0LjY3MiA1LjE2MyA2LjY1NiAzLjU4IDkgMy41OHoiIGZpbGw9IiNFQTQzMzUiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDBoMTh2MThIMHoiPjwvcGF0aD48L2c+PC9zdmc+"
+                        alt="" width="32" height="32"> <span>Google bilan davom eting</span></button>
+                <button class="button button--block button--facebook button--modal" type="button">
+                    <svg class="auth-img" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                         fill="currentColor" color="#1877F2" class="ui-svg-inline">
+                        <path d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"></path>
+                    </svg>
+                    Facebook bilan davom eting
+                </button>
+
+                <div class="modal__content-sign-up-email">
+                    <a class="modal__content-sign-up-email-link" href="#">
+                        <svg class="auth-img" width="22" height="22" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24" fill="currentColor" class="ui-svg-inline mr-2">
+                            <path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4ZM5,6H19a1,1,0,0,1,1,1l-8,4.88L4,7A1,1,0,0,1,5,6ZM20,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9.28l7.48,4.57a1,1,0,0,0,1,0L20,9.28Z"></path>
+                        </svg>
+                        Email orqali ro'yxatdan o'ting</a>
+                </div>
+            </div>
+            <footer class="modal__content-footer">
+                <div class="modal__content-footer-text"><span>Allaqachon hisobingiz bormi?</span>
+                    <a class="modal__content-footer-sign-in" href="#">Kiring</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</section>
+
+
+<!-- MODAL-SIGN-UP-WITH-EMAIL  -->
+<section class="modal" id="modal__sign-up-with-email">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <div class="modal__content-body">
+                <button class="modal__close js-modal-sign-up-email-close" type="button">
+                    <img src="../static/img/icon-close.svg" alt="" width="24" height="24">
+                </button>
+                <h2 class="modal__content-title">Email orqali roʻyxatdan oʻtish</h2>
+
+                <form class="registration-form" action="https://kun.uz" method="GET">
+                    <div class="registration-form__fields">
+                        <input class="registration-form__field" type="email" name="email" placeholder="Email"
+                               aria-label="email" required>
+                        <input class="registration-form__field" type="password" name="password" placeholder="Parol"
+                               aria-label="password" required>
+                    </div>
+                    <button class="button button--block registration-form__submit" type="submit">Kirish</button>
+                </form>
+
+                <div class="modal__content-sign-up-google">
+                    <a class="modal__content-sign-up-google-link" href="#">
+                        <img class="sign-up-google" src="https://cdna.iconscout.com/img/social-media.5a66b86.svg"
+                             width="26" height="26" class="mr-2">Google orqali roʻyxatdan oʻting</a>
+                </div>
+            </div>
+            <footer class="modal__content-footer">
+                <div class="modal__content-footer-text"><span>Allaqachon hisobingiz bormi?</span>
+                    <a class="modal__content-footer-sign-up-email" href="#">Kiring</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</section>
+
