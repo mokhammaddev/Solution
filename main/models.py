@@ -22,3 +22,16 @@ class Question(models.Model):
     science = models.ForeignKey(Science, on_delete=models.SET_NULL, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
 
+
+class Comment(models.Model):
+    author = models.ForeignKey('account.Account', on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    message = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    # def __str__(self):
+    #     if self.author.user.get_full_name() == '':
+    #         return f"{self.author.user.get_full_name()}'s comment"
+    #     return f"{self.author.user.username}'s comment"
+
+

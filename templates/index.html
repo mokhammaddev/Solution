@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javob Bor!</title>
+    <title>Solution</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="{% static '/css/normalize.css' %}">
@@ -62,14 +62,14 @@
                     <!-- Post Header -->
                     <div class="post-header">
                         <div class="user-info">
-                            <h2><a class="user-info" href="#">{{ question.author }}</a></h2>
+                    <h2><a class="user-info" href="#">{{ question.author }}</a></h2>
                         </div>
                         <i class="fas fa-ellipsis-h"></i>
                     </div>
                     <!-- Post Content -->
                     <div class="post-content">
                         <img src="{{ question.image.url }}" alt="Post Image">
-                        <p>{{ question.context }}</p>
+                        <p>{{ question.context }}</p> <a href="{% url 'detail' question.id %}">batafsil</a>
                         <!-- You can add more content like comments, likes, etc. -->
                     </div>
                     <!-- Post Footer -->

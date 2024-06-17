@@ -3,3 +3,5 @@ from main.models import *
 
 admin.site.register(Science)
 admin.site.register(Question)
+admin.site.register(Comment)
+
