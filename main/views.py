@@ -1,16 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 
-from .models import Science, Question, Comment
+from .models import Science, Question, Comment, Answer
 from .forms import CommentForm
 
 
 def index(request):
     sciences = Science.objects.all()
     questions = Question.objects.order_by('-id')
+    answers = Answer.objects.all()
     ctx = {
         'sciences': sciences,
         'questions': questions,
+        'answer': answers,
     }
     return render(request, 'index.html', ctx)
 

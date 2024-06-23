@@ -7,6 +7,10 @@ def question_photo_path(instance, filename):
     return f"question/{instance}/{filename}"
 
 
+def answer_photo_path(instance, filename):
+    return f"answer/{instance}/{filename}"
+
+
 class Science(models.Model):
     title = models.CharField(max_length=221)
 
@@ -21,6 +25,22 @@ class Question(models.Model):
     context = models.TextField(null=True, blank=True)
     science = models.ForeignKey(Science, on_delete=models.SET_NULL, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        if self.context:
+            return self.context
+        return self.author
+
+
+class Answer(models.Model):
+    author = models.ForeignKey(Account, on_delete=models.CASCADE)  # only admin or support
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    image = models.ImageField(null=True, blank=True, upload_to=answer_photo_path)
+    context = models.TextField(null=True, blank=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.question.context
 
 
 class Comment(models.Model):
